@@ -225,9 +225,11 @@ define([
                 options: {
                     map: true,  //reguired to track map and layer events
                     gaAccount: 'UA-XXX00774-02',
-                    trackLayerVisibility: true,  //track layer visibility changes
-                    trackMapZoomChange: true,  //track map extent changes
-                    trackWidgetEvents: true    //track custom widget events
+                    events: {
+                        map: ['extent-change','basemap-change' ], //array of map events
+                        layer: [ 'visibility-change', 'update-end' ], //array of layer events
+                        titlePane: [ 'open', 'close', 'dock', 'undock' ] //array of 'open', 'close', 'dock', 'undock'
+                    }
                 }
             }
 		}
