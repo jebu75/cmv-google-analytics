@@ -1,14 +1,14 @@
 cmv-google-analytics
 ====================
 
-v0.5.1
+v1.0.1
 Google analytics widget for [David Spriggs Configurable Map Viewer](https://github.com/DavidSpriggs/ConfigurableViewerJSAPI) 
 
 Widget designed to send google analytics tracking messages.  This is an early version and the type of standard events is pretty limited.  
 Widget developers can publish tracking events to 'googleAnalytics/events' as follows:
 
 ```
-topic.publish( 'googleAnaytics/events', {
+topic.publish( 'googleAnalytics/events', {
      category: 'Widget Event',
      action: 'Visible Layer Change',
      label: 'Layer Swapper',
@@ -42,7 +42,7 @@ googleAnalytics: {
 
 Looking for input on what type of standard events would be useful to track from the CMV.
 
-* Special note - this version requires the changes to FloatingPaneTitlePane.js
+* Special note - this version requires the changes to FloatingPaneTitlePane.js to work fully.  Not incorporating these additions into your will not break anything but widget events will not be sent.
 
 2 event listeners added in the postCreate method:
 ```javascript
@@ -66,5 +66,5 @@ _onOpenClose: function( isOpen ) {
     this._updateTopic( evt );
 }
 ```
-also, dojo/topic added to list of module dependancies
+also, dojo/topic added to list of module dependencies
 
