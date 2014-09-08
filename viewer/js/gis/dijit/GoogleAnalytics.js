@@ -38,10 +38,10 @@ define ( [
                      declare.safeMixin( this, {
                          map: null,
                          gaAccount: null,
-                         events: { map: [], layer: [], widget: [] },
-                         trackLayerVisibility: false,
-                         trackMapZoomChange: false,
-                         trackWidgetEvents: false
+                         events: {
+                             map: [],
+                             layer: [],
+                             titlePane: [] }
                      }, options );
 
                  },
